@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXNodesList?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.control.HiddenSidesPane?>
+
+<AnchorPane style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.CanvasController">
+	<children>
+		<AnchorPane fx:id="anchorRoot" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#KeyCode" onScroll="#HandleScroll" prefHeight="680.0" prefWidth="1000.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+			<children>
+				<Group fx:id="canvasGroup" layoutX="160.0" layoutY="-1.0" onMouseDragged="#MouseDrag" onMousePressed="#MousePress">
+					<children>
+						<Pane fx:id="viewer" prefHeight="688.0" prefWidth="840.0" style="-fx-background-color: #FFFFFF;">
+							<cursor>
+								<Cursor fx:constant="CROSSHAIR" />
+							</cursor>
+						</Pane>
+					</children>
+               <cursor>
+                  <Cursor fx:constant="CROSSHAIR" />
+               </cursor>
+				</Group>
+				<HiddenSidesPane fx:id="hiddenPane" layoutX="154.0" layoutY="-3.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="-5.0" AnchorPane.leftAnchor="154.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-3.0">
+					<cursor>
+						<Cursor fx:constant="CROSSHAIR" />
+					</cursor>
+				</HiddenSidesPane>
+				<AnchorPane prefHeight="680.0" prefWidth="166.0" style="-fx-background-color: #3b5998;" AnchorPane.bottomAnchor="-5.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+					<children>
+						<VBox layoutY="88.0" prefHeight="269.0" prefWidth="176.0" AnchorPane.topAnchor="88.0">
+							<children>
+								<JFXToggleButton id="spec" fx:id="M0Button" alignment="CENTER_LEFT" onAction="#M0Handle" prefHeight="50.0" prefWidth="160.0" size="9.0" text="Layer M0" textFill="#fcfcfc" toggleColor="#ff5722" toggleLineColor="#ffab91" unToggleColor="#546e7a" unToggleLineColor="#90a4ae">
+									<font>
+										<Font name="Arial Bold" size="16.0" />
+									</font>
+								</JFXToggleButton>
+								<JFXToggleButton fx:id="M1Button" alignment="CENTER_LEFT" onAction="#M1Handle" prefHeight="50.0" prefWidth="160.0" size="9.0" text="Layer M1" textFill="#fcfcfc" toggleColor="#ff5722" toggleLineColor="#ffab91" unToggleColor="#546e7a" unToggleLineColor="#90a4ae">
+									<font>
+										<Font name="Arial Bold" size="16.0" />
+									</font>
+								</JFXToggleButton>
+								<JFXToggleButton fx:id="M2Button" alignment="CENTER_LEFT" onAction="#M2Handle" prefHeight="50.0" prefWidth="160.0" size="9.0" text="Layer M2" textFill="#fcfcfc" toggleColor="#ff5722" toggleLineColor="#ffab91" unToggleColor="#546e7a" unToggleLineColor="#90a4ae">
+									<font>
+										<Font name="Arial Bold" size="16.0" />
+									</font>
+								</JFXToggleButton>
+								<JFXToggleButton fx:id="M3Button" alignment="CENTER_LEFT" onAction="#M3Handle" prefHeight="50.0" prefWidth="185.0" size="9.0" text="Layer M3" textFill="#fcfcfc" toggleColor="#ff5722" toggleLineColor="#ffab91" unToggleColor="#546e7a" unToggleLineColor="#90a4ae">
+									<font>
+										<Font name="Arial Bold" size="16.0" />
+									</font>
+								</JFXToggleButton>
+								<JFXToggleButton fx:id="M4Button" alignment="CENTER_LEFT" onAction="#M4Handle" prefHeight="50.0" prefWidth="160.0" size="9.0" text="Layer M4" textFill="#fcfcfc" toggleColor="#ff5722" toggleLineColor="#ffab91" unToggleColor="#546e7a" unToggleLineColor="#90a4ae">
+									<font>
+										<Font name="Arial Bold" size="16.0" />
+									</font>
+								</JFXToggleButton>
+							</children>
+						</VBox>
+						<JFXNodesList fx:id="nodesList" layoutX="41.0" layoutY="451.0" prefHeight="6.0" prefWidth="0.0">
+							<children>
+								<JFXButton style="-fx-background-radius: 40;" text="Zoom" textFill="WHITE">
+									<font>
+										<Font name="System Bold" size="23.0" />
+									</font>
+								</JFXButton>
+							</children>
+						</JFXNodesList>
+					</children>
+				</AnchorPane>
+			</children>
+         <cursor>
+            <Cursor fx:constant="CROSSHAIR" />
+         </cursor>
+		</AnchorPane>
+
+	</children>
+   <cursor>
+      <Cursor fx:constant="HAND" />
+   </cursor>
+</AnchorPane>
